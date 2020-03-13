@@ -1,0 +1,7 @@
+k_df = items_df.merge(purchase_df, how = 'inner', on = 'item_id')
+
+k_df['summary'] = k_df['stock_count'] * k_df['price']
+
+display(k_df)
+
+display(k_df.summary.sum())
